@@ -1,0 +1,15 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+@await Component.InvokeAsync("_LayoutHeadComponentPartial")
+<body>
+	<div class="wrapper">
+		@await Component.InvokeAsync("_LayoutNavbarComponentPartial")
+		@await Component.InvokeAsync("_LayoutSidebarComponentPartial")
+	@RenderBody() <!--Bu sayfaya bağlı olarak gelecek olan sayfalar, sayfamızın tam olarak bu kısmında yer alıyor olacak.-->
+	</div>
+	<</body>
+@await Component.InvokeAsync("_LayoutScriptComponentPartial")
+<</html>

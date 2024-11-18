@@ -1,0 +1,79 @@
+﻿@model List<Experience>
+@{
+    ViewData["Title"] = "ExperineceList";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<div class="main-panel">
+	<div class="content">
+		<div class="container-fluid">
+			<h4 class="page-title">Deneyimler</h4>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="card">
+						<div class="card-header">
+							<div class="card-title">Deneyim Listesi</div>
+						</div>
+						<div class="card-body">
+							<div class="card-sub">
+								Deneyimler ile ilgili işlemleri aşağıdaki panelden yapabilirsiniz.
+							</div>
+							<table class="table mt-3">
+								<thead>
+									<tr>
+										<th scope="col">#</th>
+										<th scope="col">Başlık</th>
+										<th scope="col">Unvan</th>
+										<th scope="col">Tarih</th>
+										<th scope="col">Sil</th>
+										<th scope="col">Güncelle</th>
+									</tr>
+								</thead>
+								<tbody>
+									@foreach(var item in Model)
+									{
+									<tr>
+										<td>@item.ExperienceId</td>
+										<td>@item.Head</td>
+										<td>@item.Title</td>
+										<td>@item.Date</td>
+										<td><a href="/Experience/DeleteExperience/@item.ExperienceId" class="btn btn-danger">Sil</a></td>
+										<td><a href="/Experience/UpdateExperience/@item.ExperienceId" class="btn btn-danger">Güncelle</a></td>
+									</tr>
+									}
+								</tbody>
+								<td><a href="/Experience/CreateExperience/" class="btn btn-primary">Yeni Deneyim Girişi</a></td>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="container-fluid">
+			<nav class="pull-left">
+				<ul class="nav">
+					<li class="nav-item">
+						<a class="nav-link" href="http://www.themekita.com">
+							ThemeKita
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							Help
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							Licenses
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="copyright ml-auto">
+				2018, made with <i class="la la-heart heart text-danger"></i> by <a href="http://www.themekita.com">ThemeKita</a>
+			</div>
+		</div>
+	</footer>
+</div>
