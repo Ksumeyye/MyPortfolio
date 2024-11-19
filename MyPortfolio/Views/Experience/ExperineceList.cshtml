@@ -4,7 +4,7 @@
     Layout = "~/Views/Layout/Index.cshtml";
 }
 
-<div class="main-panel">
+
 	<div class="content">
 		<div class="container-fluid">
 			<h4 class="page-title">Deneyimler</h4>
@@ -23,7 +23,7 @@
 									<tr>
 										<th scope="col">#</th>
 										<th scope="col">Başlık</th>
-										<th scope="col">Unvan</th>
+										<th scope="col">Ünvan</th>
 										<th scope="col">Tarih</th>
 										<th scope="col">Sil</th>
 										<th scope="col">Güncelle</th>
@@ -38,7 +38,7 @@
 										<td>@item.Title</td>
 										<td>@item.Date</td>
 										<td><a href="/Experience/DeleteExperience/@item.ExperienceId" class="btn btn-danger">Sil</a></td>
-										<td><a href="/Experience/UpdateExperience/@item.ExperienceId" class="btn btn-danger">Güncelle</a></td>
+										<td><a href="/Experience/UpdateExperience/@item.ExperienceId" class="btn btn-warning">Güncelle</a></td>
 									</tr>
 									}
 								</tbody>
@@ -50,30 +50,4 @@
 			</div>
 		</div>
 	</div>
-	<footer class="footer">
-		<div class="container-fluid">
-			<nav class="pull-left">
-				<ul class="nav">
-					<li class="nav-item">
-						<a class="nav-link" href="http://www.themekita.com">
-							ThemeKita
-						</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">
-							Help
-						</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">
-							Licenses
-						</a>
-					</li>
-				</ul>
-			</nav>
-			<div class="copyright ml-auto">
-				2018, made with <i class="la la-heart heart text-danger"></i> by <a href="http://www.themekita.com">ThemeKita</a>
-			</div>
-		</div>
-	</footer>
-</div>
+
