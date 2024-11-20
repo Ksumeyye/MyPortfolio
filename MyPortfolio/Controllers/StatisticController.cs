@@ -10,10 +10,14 @@ namespace MyPortfolio.Controllers
         {
             ViewBag.v1 = context.Skills.Count();
             ViewBag.v2=context.Messages.Count();
-            ViewBag.v3=context.Messages.Where(x=>x.IsRead==false).ToList();
-            ViewBag.v3=context.Messages.Where(x=>x.IsRead==true).ToList();
+            ViewBag.v3=context.Messages.Where(x=>x.IsRead==false).Count();
+            ViewBag.v4=context.Messages.Where(x=>x.IsRead==true).Count();
+            ViewBag.v5 = context.Testimonials.Count();
+			ViewBag.v6 = context.SocialMedias.Count();
+			ViewBag.v7 = context.Skills.Count();
+			ViewBag.v8 = context.Portfolios.Count();
 
-            return View();
+			return View();
         }
     }
 }
