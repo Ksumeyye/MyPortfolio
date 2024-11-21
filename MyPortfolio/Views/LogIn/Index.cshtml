@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/login.css">
+</head>
+<body>
+
+      <div class="col-md-9 col-lg-6 col-xl-5">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+          class="img-fluid" alt="Sample image">
+      </div>
+
+ <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+            <p class="lead fw-normal mb-0 me-3">Admin Giriş Sayfası</p>
+            </div>
+            <br/>
+    <form method="post" class="login-form">
+         <div data-mdb-input-init class="form-outline mb-4">
+          
+            <input type="email" id="Email" name="Email"  class="form-control form-control-lg" required placeholder="E-mailinizi giriniz" />
+            <label class="form-label" for="Email">Email Adresiniz</label>
+        </div>
+
+        <div data-mdb-input-init class="form-outline mb-3">
+            
+            <input type="password" id="Password" name="Password"class="form-control form-control-lg" required placeholder="Şifrenizi giriniz" />
+            <label class="form-label" for="Password">Şifreniz</label>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg"
+              style="padding-left: 2.5rem; padding-right: 2.5rem;">Giriş</button>
+    </form>
+
+    @if (ViewBag.ErrorMessage != null)
+    {
+        <p class="error-message">@ViewBag.ErrorMessage</p>
+    }
+</div>
+
+</body>
+</html>

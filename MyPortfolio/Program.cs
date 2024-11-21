@@ -1,7 +1,25 @@
+using Microsoft.CodeAnalysis;
+using Microsoft.Data.SqlClient.Server;
+using System.Diagnostics;
+using System.Threading;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme) //// Kimlik doðrulama için cookie tabanlý oturum açma iþlemini ekledim
+    .AddCookie(options =>
+    {
+        // Login yolunu belirledim
+        options.LoginPath = "/LogIn/Index/"; // Kullanýcý giriþ yapacak sayfa
+        options.AccessDeniedPath = "/LogIn/Index"; // Eriþim reddedildi sayfasý
+    });
+
 
 var app = builder.Build();
 
@@ -12,16 +30,16 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
-
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
 
-app.UseAuthorization();
+app.UseAuthentication(); //Kimlik Doðrulama ekledim
+app.UseAuthorization(); //Yetkilendirme
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}"); //// HTTP istekleri için routing yapýlandýrmasý
 
 app.Run();
