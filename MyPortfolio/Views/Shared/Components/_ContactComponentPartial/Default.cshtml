@@ -1,63 +1,18 @@
 ﻿@model List<MyPortfolio.DAL.Entities.Contact>
-<section id="contact" class="s-contact target-section">
+<section id="contact" @* class="s-contact-target-section" *@>
 
     <div class="overlay"></div>
-
+    <br/>
     <div class="row narrow section-intro">
         <div class="col-full">
+            <br/>
+            <br/>
             <h3>İletişim</h3>
             <h1>Bana Ulaşın...</h1>
-
-            <p class="Aşağıdan bilgilerinizi girip mesajınızı yazarak benimle iletişime geçebilirsiniz."</p>
         </div>
     </div>
-   
+    @await Component.InvokeAsync("_MessageComponentPartial")
     <div class="row contact__main">
-        <div class="col-eight tab-full contact__form">
-
-            <form name="contactForm" id="contactForm" method="post" action="">
-                <fieldset>
-
-                    <div class="form-field">
-                        <input name="contactName" type="text" id="contactName" placeholder="Name" value="" minlength="2" required="" aria-required="true" class="full-width">
-                    </div>
-                    <div class="form-field">
-                        <input name="contactEmail" type="email" id="contactEmail" placeholder="Email" value="" required="" aria-required="true" class="full-width">
-                    </div>
-                    <div class="form-field">
-                        <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="" class="full-width">
-                    </div>
-                    <div class="form-field">
-                        <textarea name="contactMessage" id="contactMessage" placeholder="message" rows="10" cols="50" required="" aria-required="true" class="full-width"></textarea>
-                    </div>
-                    <div class="form-field">
-                        <button class="full-width btn--primary">Gönder</button>
-                        <div class="submit-loader">
-                            <div class="text-loader">Gönderiliyor...</div>
-                            <div class="s-loader">
-                                <div class="bounce1"></div>
-                                <div class="bounce2"></div>
-                                <div class="bounce3"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                </fieldset>
-            </form>
-
-            <!-- contact-warning -->
-            <div class="message-warning">
-
-                Bir şeyler ters gitti. Lütfen tekrar deneyin.
-            </div>
-
-            <!-- contact-success -->
-            <div class="message-success">
-
-                Mesajınız gönderildi, teşekkür ederiz!<br>
-            </div>
-
-        </div>
 
         @foreach (var item in Model)
         {

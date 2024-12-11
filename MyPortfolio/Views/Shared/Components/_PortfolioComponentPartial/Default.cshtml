@@ -9,43 +9,7 @@
             <p class="lead">Yeni ve yenilikçi teknolojileri takip ederek yaptığım projelerimin bir kaçını aşağıda görüntüleyebilirsiniz. Daha fazlasını github hesabımı ziyaret ederek ulaşabilirsiniz.  </p>
         </div>
     </div>
-    @* @foreach(var item in Model)
-    {
-    <div class="row masonry-wrap">
-        <div class="masonry">
 
-            <div class="masonry__brick">
-                <div class="item-folio">
-
-                    <div class="item-folio__thumb">
-                        <a href="@item.Url" class="thumb-link" title="@item.Title" data-size="1050x700">
-                            <img src="@item.ImageUrl" alt="">
-                            <span class="shadow-overlay"></span>
-                        </a>
-                    </div>
-
-                    <div class="item-folio__text">
-                        <h3 class="item-folio__title">
-                            @item.Title
-                        </h3>
-                        <p class="item-folio__cat">
-                            @item.SubTitle
-                        </p>
-                    </div>
-
-                    <a href="@item.Url" class="item-folio__project-link" title="Project link">
-                        <i class="im im-link"></i>
-                    </a>
-
-                    <div class="item-folio__caption">
-                        <p>@item.Description</p>
-                    </div>
-
-                </div> <!-- end item-folio -->
-            </div> <!-- end masonry__brick -->
-        </div>
-        </div>
-    } *@
     @foreach(var item in Model)
     {
         <div class="masonry__brick">
@@ -54,8 +18,7 @@
                 <div class="item-folio__thumb">
                     <a href="@item.ImageUrl" class="thumb-link" data-size="1050x700">
                         <img src="@item.ImageUrl "
-                             srcset="@item.ImageUrl 1x, @item.ImageUrl 2x" alt="" style=" width:500px; height:200px;  object-fit:cover; margin-top:10px; margin-left:10px; margin-right:10px;
-margin-bottom:10px">
+                             srcset="@item.ImageUrl 1x, @item.ImageUrl 2x" alt="" style=" width:500px; height:200px;  object-fit:cover; margin-top:10px; margin-left:10px; margin-right:10px; margin-bottom:10px">
                         <span class="shadow-overlay"></span>
                     </a>
                 </div>
@@ -83,4 +46,10 @@ margin-bottom:10px">
     <br/>
     <br/>
     <br/>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
 </section>
