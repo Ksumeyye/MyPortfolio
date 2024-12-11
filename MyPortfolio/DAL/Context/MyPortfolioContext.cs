@@ -20,5 +20,7 @@ namespace MyPortfolio.DAL.Context
         public DbSet<Testimonial> Testimonials { get; set; }
         public DbSet<ToDoList> ToDoLists { get; set; }
         public DbSet<Admin>Admins { get; set; }
+        public DbSet<MyProfile>MyProfiles { get; set; }
+        public object MyProfile { get; internal set; }
     }
 }

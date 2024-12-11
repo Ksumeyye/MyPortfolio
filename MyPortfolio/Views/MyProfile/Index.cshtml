@@ -1,0 +1,57 @@
+﻿@model List<MyProfile>
+
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Layout/Index.cshtml";
+	int count = 0;
+}
+<div class="content">
+	<div class="container-fluid">
+		<h4 class="page-title">Profilim</h4>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="card">
+					<div class="card-header">
+						<div class="card-title">Benim Sayfam</div>
+					</div>
+					<div class="card-body">
+						<div class="card-sub">
+							Benim Hakkımda
+						</div>
+						<table class="table mt-3">
+							<thead>
+								<tr>
+									<th scope="col">#</th>
+									<th scope="col">İsim</th>
+									<th scope="col">Soyisim</th>
+									<th scope="col">Resim</th>
+									<th scope="col">Meslek</th>
+									<th scope="col">Güncelle</th>
+								</tr>
+							</thead>
+							<tbody>
+								@foreach (var item in Model)
+								{
+									count++;
+									<tr>
+										<td>@count</td>
+										<td>@item.Name</td>
+										<td>@item.Surname</td>
+										<td>@item.ImageURL</td>
+										<td>@item.Job</td>
+										<td><a href="/MyProfile/UpdateMyProfile/@item.MyProfileId" class="btn btn-warning">Güncelle</a></td>
+									</tr>
+								}
+							</tbody>
+							<td><a href="/MyProfile/CreateMyProfile/" class="btn btn-primary">Yeni Profil Oluştur</a></td>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+

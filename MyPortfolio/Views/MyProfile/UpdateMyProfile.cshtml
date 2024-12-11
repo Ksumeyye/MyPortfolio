@@ -1,0 +1,47 @@
+﻿@model MyProfile
+@{
+    ViewData["Title"] = "UpdateMyProfile";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<div class="content">
+    <div class="container-fluid">
+        <h4 class="page-title">Profilim</h4>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Profilimi Güncelleme Sayfası</div>
+                    </div>
+                    <div class="card-body">
+
+                        <form method="post">
+                            <input type="hidden" asp-for="MyProfileId" />
+                            <label>İsim</label>
+                            <input type="text" asp-for="Name" class="form-control" />
+                            <br />
+                            <label>Soyisim</label>
+                            <input type="text" asp-for="Surname" class="form-control" />
+                            <br />
+                            <label>Görsel Yolu</label>
+                            <input type="text" asp-for="ImageURL" class="form-control" />
+                            <br />
+                            <label>Meslek</label>
+                            <input type="text" asp-for="Job" class="form-control" />
+                            <br />
+                            <label>E-Mail</label>
+                            <input type="text" asp-for="Admin.Email" class="form-control" />
+                            <br />
+                            <label>Şifre</label>
+                            <input type="password" asp-for="Admin.Password" class="form-control" />
+                            <br />
+                            <button class="btn btn-success">Profili Güncelle</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

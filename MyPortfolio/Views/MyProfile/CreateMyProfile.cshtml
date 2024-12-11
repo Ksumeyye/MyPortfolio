@@ -1,0 +1,51 @@
+﻿@model MyProfile
+@{
+    ViewData["Title"] = "CreateMyProfile";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+
+<div class="content">
+    <div class="container-fluid">
+        <h4 class="page-title">Profilim</h4>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Benim Hakkımda</div>
+                    </div>
+                    <div class="card-body">
+                        <form method="post">
+                            <label>İsim</label>
+                            <input type="text" asp-for="Name" class="form-control" /> <!--asp-for="Title" ile modelin içindeki propertylere erişim sağlanır.form-control ile uzunca metin kutusunun gelmesini sağlar.-->
+                            <br />
+                            <label>Soyisim</label>
+                            <input type="text" asp-for="Surname" class="form-control" /> <!--asp-for="Title" ile modelin içindeki propertylere erişim sağlanır.form-control ile uzunca metin kutusunun gelmesini sağlar.-->
+                            <br />
+                            <label>Görsel Yolu</label>
+                            <input type="text" asp-for="ImageURL" class="form-control" /> <!--asp-for="ImageUrl" ile modelin içindeki propertylere erişim sağlanır.form-control ile uzunca metin kutusunun gelmesini sağlar.-->
+                            <br />
+                            <label>Meslek</label>
+                            <input type="text" asp-for="Job" class="form-control" /> <!--asp-for="Date" ile modelin içindeki propertylere erişim sağlanır.form-control ile uzunca metin kutusunun gelmesini sağlar.-->
+                            <br />
+                            <label>E-Mail</label>
+                            <input type="text" asp-for="Admin.Email" class="form-control" /> <!--asp-for="Title" ile modelin içindeki propertylere erişim sağlanır.form-control ile uzunca metin kutusunun gelmesini sağlar.-->
+                            <br />
+                            <label>Şifre</label>
+                            <input type="password" asp-for="Admin.Password" class="form-control" /> <!--asp-for="Title" ile modelin içindeki propertylere erişim sağlanır.form-control ile uzunca metin kutusunun gelmesini sağlar.-->
+                            <br />
+                            @*  <label>Durum</label>
+                            <input type="checkbox" asp-for="Status"/> *@ <!--asp-for="Status" ile modelin içindeki propertylere erişim sağlanır.form-control ile uzunca metin kutusunun gelmesini sağlar.-->
+                            <br />
+                            <button class="btn btn-primary">Profil Ekle</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

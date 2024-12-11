@@ -3,7 +3,6 @@
     ViewData["Title"] = "CreateToDoList";
     Layout = "~/Views/Layout/Index.cshtml";
 }
-
 <div class="content">
     <div class="container-fluid">
         <h4 class="page-title">Yapılacaklar</h4>
@@ -19,20 +18,19 @@
                         </div>
                         <form method="post">
                             <label>Yapılacaklar İçeriği</label>
-                            <input type="text" asp-for="Title" class="form-control" /> <!--asp-for="Title" ile modelin içindeki propertylere erişim sağlanır.form-control ile uzunca metin kutusunun gelemsini sağlar.-->
+                            <input type="text" asp-for="Title" class="form-control" /> <!--asp-for="Title" ile modelin içindeki propertylere erişim sağlanır.form-control ile uzunca metin kutusunun gelmesini sağlar.-->
                             <br />
                             <label>Görsel Yolu</label>
-                            <input type="text" asp-for="ImageUrl" class="form-control" /> <!--asp-for="ImageUrl" ile modelin içindeki propertylere erişim sağlanır.form-control ile uzunca metin kutusunun gelemsini sağlar.-->
+                            <input type="text" asp-for="ImageUrl" class="form-control" /> <!--asp-for="ImageUrl" ile modelin içindeki propertylere erişim sağlanır.form-control ile uzunca metin kutusunun gelmesini sağlar.-->
                             <br />
                             <label>Tarih Aralığı</label>
-                            <input type="text" asp-for="Date" class="form-control" /> <!--asp-for="Date" ile modelin içindeki propertylere erişim sağlanır.form-control ile uzunca metin kutusunun gelemsini sağlar.-->
+                            <input type="text" asp-for="Date" class="form-control" /> <!--asp-for="Date" ile modelin içindeki propertylere erişim sağlanır.form-control ile uzunca metin kutusunun gelmesini sağlar.-->
                             <br />
                            @*  <label>Durum</label>
-                            <input type="checkbox" asp-for="Status"/> *@ <!--asp-for="Status" ile modelin içindeki propertylere erişim sağlanır.form-control ile uzunca metin kutusunun gelemsini sağlar.-->
+                            <input type="checkbox" asp-for="Status"/> *@ <!--asp-for="Status" ile modelin içindeki propertylere erişim sağlanır.form-control ile uzunca metin kutusunun gelmesini sağlar.-->
                             <br />
                             <button class="btn btn-primary">Yapılacak İşi Ekle</button>
                         </form>
-
                     </div>
                 </div>
             </div>
