@@ -3,12 +3,17 @@
 
     <div class="overlay"></div>
     <div class="shadow-overlay"></div>
+  
     @foreach (var item in Model)
     {
+      
         <div class="home-content">
 
             <div class="row home-content__main">
 
+
+                <img src="@item.ImageUrl" alt="" style="width: 100%; max-width: 400px; height: auto;  border: 5px solid #000; border-radius: 10px; ">
+                
                 <h3>@item.Title</h3>
 
                 <h1>
