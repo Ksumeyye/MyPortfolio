@@ -34,7 +34,7 @@ namespace MyPortfolio.Controllers
                 await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);   // Kullanıcıyı kimlik doğrulama
                 return RedirectToAction("Index", "Statistic");   // Admin ana sayfaya yönlendir
             }
-            ViewBag.ErrorMessage = "Hatalı giriş, LogIn sayfasına geri dön";
+            ViewBag.ErrorMessage = "Hatalı giriş, E-mail adresiniz ya da şifreniz hatalıdır.Tekrar deneyiniz.";
             return View();
         }
 
