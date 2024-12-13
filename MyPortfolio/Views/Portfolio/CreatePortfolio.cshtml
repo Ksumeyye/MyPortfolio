@@ -1,0 +1,45 @@
+﻿@model Portfolio
+@{
+    ViewData["Title"] = "CreatePortfolio";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<div class="content">
+    <div class="container-fluid">
+        <h4 class="page-title">Portfolyo</h4>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Projelerim</div>
+                    </div>
+                    <div class="card-body">
+                        <form method="post">
+                            <label>Ana Başlık</label>
+                            <input type="text" asp-for="Title" class="form-control" /> <!--asp-for="Title" ile modelin içindeki propertylere erişim sağlanır.form-control ile uzunca metin kutusunun gelmesini sağlar.-->
+                            <br />
+                            <label>Alt Başlık</label>
+                            <input type="text" asp-for="SubTitle" class="form-control" /> <!--asp-for="Title" ile modelin içindeki propertylere erişim sağlanır.form-control ile uzunca metin kutusunun gelmesini sağlar.-->
+                            <br />
+                            <label>Görsel Yolu</label>
+                            <input type="text" asp-for="ImageUrl" class="form-control" /> <!--asp-for="ImageUrl" ile modelin içindeki propertylere erişim sağlanır.form-control ile uzunca metin kutusunun gelmesini sağlar.-->
+                            <br />
+                            <label>Proje GitHub Url</label>
+                            <input type="text" asp-for="Url" class="form-control" /> <!--asp-for="Date" ile modelin içindeki propertylere erişim sağlanır.form-control ile uzunca metin kutusunun gelmesini sağlar.-->
+                            <br />
+                            <label>Açıklama</label>
+                            <input type="text" asp-for="Description" class="form-control" /> <!--asp-for="Title" ile modelin içindeki propertylere erişim sağlanır.form-control ile uzunca metin kutusunun gelmesini sağlar.-->
+                            <br />
+                            <button class="btn btn-primary">Proje Ekle</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

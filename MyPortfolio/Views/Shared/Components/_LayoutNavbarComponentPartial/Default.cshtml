@@ -13,7 +13,7 @@
 	<nav class="navbar navbar-header navbar-expand-lg">
 		<div class="container-fluid">
 
-			<form class="navbar-left navbar-form nav-search mr-md-3" action="">
+@* 			<form class="navbar-left navbar-form nav-search mr-md-3" action="">
 				<div class="input-group">
 					<input type="text" placeholder="Aranacak Kelimeyi Giriniz ..." class="form-control">
 					<div class="input-group-append">
@@ -22,7 +22,20 @@
 						</span>
 					</div>
 				</div>
+			</form> *@
+			<form class="navbar-left navbar-form nav-search mr-md-3" id="searchForm">
+				<div class="input-group">
+					<input type="text" id="searchInput" placeholder="Aranacak Kelimeyi Giriniz ..." class="form-control">
+					<div class="input-group-append">
+						<span class="input-group-text">
+							<i class="la la-search search-icon"></i>
+						</span>
+					</div>
+				</div>
 			</form>
+
+			<div id="searchResults"></div> <!-- Arama sonuçlarının burada görüntülenmesi için bir alan -->
+
 			<ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
 				<li class="nav-item dropdown hidden-caret">
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -31,7 +44,7 @@
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" href="/Message/Inbox/">Gelen Mesajlar</a>
 						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="#">İletişim Paneli</a>
+						<a class="dropdown-item" href="/Contact/Index/">İletişim Paneli</a>
 					</div>
 				</li>
 			
@@ -72,7 +85,7 @@
 					</ul>
 				</li>
 				<li class="nav-item dropdown">
-					<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false"> <img src="https://r.resimlink.com/OxjTb-g6.jpg" alt="user-img" width="36" class="img-circle"><span>Sümeyye Kaya</span></span> </a>
+					<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false"> <img src="https://r.resimlink.com/ClZFS7pvy.jpg" alt="user-img" width="36" class="img-circle"><span>Sümeyye Kaya</span></span> </a>
 					<ul class="dropdown-menu dropdown-user">
 						<li>
 							<div class="user-box">

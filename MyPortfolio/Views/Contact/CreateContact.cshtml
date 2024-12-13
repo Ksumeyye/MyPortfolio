@@ -1,0 +1,48 @@
+﻿@model Contact
+@{
+    ViewData["Title"] = "CreateContact";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<div class="content">
+    <div class="container-fluid">
+        <h4 class="page-title">İletişim Bilgisi</h4>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">İletişim</div>
+                    </div>
+                    <div class="card-body">
+                        <form method="post">
+                            <label>İsim</label>
+                            <input type="text" asp-for="Title" class="form-control" /> <!--asp-for="Description" ile modelin içindeki propertylere erişim sağlanır.form-control ile uzunca metin kutusunun gelmesini sağlar.-->
+                            <br />
+                            <label>Açıklama</label>
+                            <input type="text" asp-for="Description" class="form-control" /> <!--asp-for="Description" ile modelin içindeki propertylere erişim sağlanır.form-control ile uzunca metin kutusunun gelmesini sağlar.-->
+                            <br />
+                            <label>Telefon 1</label>
+                            <input type="text" asp-for="Phone1" class="form-control" /> <!--asp-for="Phone1" ile modelin içindeki propertylere erişim sağlanır.form-control ile uzunca metin kutusunun gelmesini sağlar.-->
+                            <br />
+                            <label>Telefon 2</label>
+                            <input type="text" asp-for="Phone2" class="form-control" /> <!--asp-for="Phone2" ile modelin içindeki propertylere erişim sağlanır.form-control ile uzunca metin kutusunun gelmesini sağlar.-->
+                            <br />
+                            <label>E-mail 1</label>
+                            <input type="text" asp-for="Email1" class="form-control" /> <!--asp-for="Email1" ile modelin içindeki propertylere erişim sağlanır.form-control ile uzunca metin kutusunun gelmesini sağlar.-->
+                            <br />
+                            <label>E-Mai 2</label>
+                            <input type="text" asp-for="Email2" class="form-control" /> <!--asp-for="Email2" ile modelin içindeki propertylere erişim sağlanır.form-control ile uzunca metin kutusunun gelmesini sağlar.-->
+                            <br />
+                            <label>Adres</label>
+                            <input type="text" asp-for="Address" class="form-control" /> <!--asp-for="Address" ile modelin içindeki propertylere erişim sağlanır.form-control ile uzunca metin kutusunun gelmesini sağlar.-->
+                            <br />
+                            <button class="btn btn-primary">İletişim Bilgisi Ekle</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

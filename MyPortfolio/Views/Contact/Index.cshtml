@@ -1,0 +1,62 @@
+﻿@model List<Contact>
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Layout/Index.cshtml";
+	int count = 0;
+}
+
+<div class="content">
+	<div class="container-fluid">
+		<h4 class="page-title">Profilim</h4>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="card">
+					<div class="card-header">
+						<div class="card-title">İletişim Sayfası</div>
+					</div>
+					<div class="card-body">
+						<div class="card-sub">
+							İletişim Bilgileri
+						</div>
+						<table class="table mt-3">
+							<thead>
+								<tr>
+									<th scope="col">#</th>
+									<th scope="col">İsim</th>
+									<th scope="col">Açıklama</th>
+									<th scope="col">Telefon Numarası 1</th>
+									<th scope="col">Telefon Numarası 2</th>
+									<th scope="col">Email 1</th>
+									<th scope="col">Email 2</th>
+									<th scope="col">Adres</th>
+								</tr>
+							</thead>
+							<tbody>
+								@foreach (var item in Model)
+								{
+									count++;
+									<tr>
+										<td>@count</td>
+										<td>@item.Title</td>
+										<td>@item.Description</td>
+										<td>@item.Phone1</td>
+										<td>@item.Phone2</td>
+										<td>@item.Email1</td>
+										<td>@item.Email2</td>
+										<td>@item.Address</td>
+										<td><a href="/Contact/UpdateContact/@item.ContactId" class="btn btn-warning">Güncelle</a></td>
+									</tr>
+								}
+							</tbody>
+							<td><a href="/Contact/CreateContact/" class="btn btn-primary">Yeni Profil Oluştur</a></td>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+

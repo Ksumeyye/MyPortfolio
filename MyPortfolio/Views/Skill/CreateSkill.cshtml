@@ -1,0 +1,36 @@
+﻿@model Skill
+@{
+    ViewData["Title"] = "CreateSkill";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<div class="content">
+    <div class="container-fluid">
+        <h4 class="page-title">Yeteneklerim</h4>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Yeteneklerim & Becerilerim</div>
+                    </div>
+                    <div class="card-body">
+                        <form method="post">
+                            <label>Yetenek Adı</label>
+                            <input type="text" asp-for="Title" class="form-control" /> <!--asp-for="Title" ile modelin içindeki propertylere erişim sağlanır.form-control ile uzunca metin kutusunun gelmesini sağlar.-->
+                            <br />
+                            <label>Değer</label>
+                            <input type="text" asp-for="Value" class="form-control" /> <!--asp-for="Value" ile modelin içindeki propertylere erişim sağlanır.form-control ile uzunca metin kutusunun gelmesini sağlar.-->
+                            <br />
+                            <button class="btn btn-primary">Yetenek Ekle</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

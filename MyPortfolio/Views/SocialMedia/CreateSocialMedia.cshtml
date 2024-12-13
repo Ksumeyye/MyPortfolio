@@ -1,0 +1,38 @@
+﻿@model SocialMedia
+@{
+    ViewData["Title"] = "CreateSocialMedia";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<div class="content">
+    <div class="container-fluid">
+        <h4 class="page-title">Sosyal Medya Hesapları</h4>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Sosyal Medya</div>
+                    </div>
+                    <div class="card-body">
+                        <form method="post">
+                            <label>Hesap Adı</label>
+                            <input type="text" asp-for="Title" class="form-control" /> <!--asp-for="Title" ile modelin içindeki propertylere erişim sağlanır.form-control ile uzunca metin kutusunun gelmesini sağlar.-->
+                            <br />
+                            <label>Hesap Adresi</label>
+                            <input type="text" asp-for="Url" class="form-control" /> <!--asp-for="Url" ile modelin içindeki propertylere erişim sağlanır.form-control ile uzunca metin kutusunun gelmesini sağlar.-->
+                            <br />
+                            <label>İkon</label>
+                            <input type="text" asp-for="Icon" class="form-control" /> <!--asp-for="Icon" ile modelin içindeki propertylere erişim sağlanır.form-control ile uzunca metin kutusunun gelmesini sağlar.-->
+                            <br />
+                            <button class="btn btn-primary">Sosyal Medya Hesabı Ekle</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
